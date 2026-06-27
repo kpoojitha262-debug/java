@@ -1,0 +1,53 @@
+#Ascending Order
+public class AscendingOrder 
+{
+public static void main(String[] args)
+{
+	int arr[] = {10,76,25,36,48,20,35};
+	
+	for(int i = 0 ; i < arr.length;i++)
+	{
+		for(int j = i+1; j < arr.length; j++)
+		{
+			if(arr[i] > arr[j])
+			{
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] =  temp;
+			}
+		}
+	}
+		System.out.println("Ascending order :");
+for(int num: arr) {
+	System.out.print(num + " ");
+	
+}
+}
+}
+
+#Descending Order
+public class DescendingOrder 
+{
+public static void main(String[] args) 
+{
+int arr[] = {45,20,1,78,62,42,21,11,56,32,29,26,8,30,11,4};	
+
+for(int i = 0 ; i< arr.length; i++) 
+{
+	for(int j = i+1 ; j < arr.length; j++) 
+	{
+	    if (arr[i] < arr[j]) 
+	    {
+		  int temp = arr[i];
+		  arr[i] = arr[j];
+		  arr[j] = temp;
+	  }
+	}  	
+  }
+System.out.println("Descending Order : ");
+ for(int num : arr) 
+{
+	System.out.print(num + "  ");
+}
+}
+}
