@@ -1,0 +1,14 @@
+public class Test4 {
+	void generate(String str,int n) {
+		if(n == 0) {
+			System.out.println(str);
+			return;
+		}
+		generate(str + "0", n-1);//choice 0
+		generate(str + "1", n-1);//choice 1
+	}
+public static void main(String[] args) {
+	Test4 t = new Test4();
+	t.generate(" ",3);
+}
+}
