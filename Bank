@@ -1,0 +1,14 @@
+public class Bank {
+    static double calculateBalance(int months,double balance) {
+	if(months == 0) {
+        return balance;		
+	}
+	balance = balance + (balance*0.10);
+	balance = balance - 2000;
+	return calculateBalance(months-1,balance);
+}
+public static void main(String[] args) {
+	double result = calculateBalance(3,10000);
+	System.out.println("Remaining Balance: "+ result);
+}
+}
