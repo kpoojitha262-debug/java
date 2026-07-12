@@ -1,0 +1,13 @@
+public class Sample1 {
+ int a = 45;
+ int b = 25;
+ void show() {
+	 System.out.println("Jva Application Development");
+ }
+ public static void main(String[] args) {
+	Sample1 obj = new Sample1();
+	System.out.println("A: "+ obj.a);
+    System.out.println("B: "+ obj.b);
+    obj.show();
+}
+}
