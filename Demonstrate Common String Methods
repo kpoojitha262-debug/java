@@ -1,0 +1,19 @@
+public class StringDemo {
+public static void main(String[] args) {
+	String s = "Java Application Development";
+	System.out.println(s);
+	s.concat("Development");
+	System.out.println(s);
+	String s1 = s.concat("Development");
+	System.out.println(s1);
+	System.out.println(s1.length());
+	System.out.println(s1.isEmpty());
+	System.out.println(s1.hashCode());
+	System.out.println(s1.equals("Java Application Development"));
+	System.out.println(s1.equalsIgnoreCase("java application development"));
+	char ch[] = s1.toCharArray();
+	for(char ch1 : ch) {
+		System.out.println(ch1);
+	}
+}
+}
