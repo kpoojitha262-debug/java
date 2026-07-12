@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+
+public class ArrayListDemo 
+{
+public static void main(String[] args)
+{
+	ArrayList<String>  transaction = new ArrayList<String>();
+	transaction.add("Deposited 5000");
+	transaction.add("Withdraw 4500");
+	transaction.add("Transferred 3000");
+	transaction.add("Recieved 4200");
+	
+	System.out.println("-----------Mini Statement ---------------- ");
+	
+	for(String trans : transaction)
+	{
+		System.out.println(trans);
+	}
+	System.out.println("Total number of transactions are " + transaction.size());
+}
+}
