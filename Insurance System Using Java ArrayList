@@ -1,0 +1,131 @@
+package com.poojitha.day8Assignment;
+
+	import java.util.ArrayList;
+	import java.util.Scanner;
+
+	class Policy {
+
+	    String policyNumber;
+	    String customerName;
+	    double premiumAmount;
+	    String policyType;
+	    boolean active;
+	    
+	    Policy(String policyNumber, String customerName,
+	           double premiumAmount, String policyType,
+	           boolean active) {
+
+	        this.policyNumber = policyNumber;
+	        this.customerName = customerName;
+	        this.premiumAmount = premiumAmount;
+	        this.policyType = policyType;
+	        this.active = active;
+	    }
+	    void display() {
+	        System.out.println("Policy Number : " + policyNumber);
+	        System.out.println("Customer Name : " + customerName);
+	        System.out.println("Premium Amount : " + premiumAmount);
+	        System.out.println("Policy Type : " + policyType);
+	        System.out.println("Policy Status : " + (active ? "Active" : "Expired"));
+	        System.out.println("-----------------------------------");
+	    }
+	}
+	public class InsuranceSystem {
+
+	    public static void main(String[] args) {
+
+	        Scanner sc = new Scanner(System.in);
+
+	        ArrayList<Policy> policies = new ArrayList<>();
+
+	        System.out.print("Enter number of policies: ");
+	        int n = sc.nextInt();
+	        sc.nextLine();
+	        for (int i = 0; i < n; i++) {
+
+	            System.out.println("\nEnter Policy Details");
+
+	            System.out.print("Policy Number: ");
+	            String policyNumber = sc.nextLine();
+
+	            System.out.print("Customer Name: ");
+	            String customerName = sc.nextLine();
+
+	            System.out.print("Premium Amount: ");
+	            double premiumAmount = sc.nextDouble();
+	            sc.nextLine();
+
+	            System.out.print("Policy Type: ");
+	            String policyType = sc.nextLine();
+
+	            System.out.print("Is Policy Active? (true/false): ");
+	            boolean active = sc.nextBoolean();
+	            sc.nextLine();
+
+	            Policy p = new Policy(policyNumber, customerName,
+	                    premiumAmount, policyType, active);
+
+	            policies.add(p);
+	        }
+	        System.out.println("\n--- All Policies ---");
+
+	        for (Policy p : policies) {
+	            p.display();
+	        }
+	        System.out.print("\nEnter Policy Number to Search: ");
+	        String searchPolicy = sc.nextLine();
+
+	        boolean found = false;
+
+	        for (Policy p : policies) {
+
+	            if (p.policyNumber.equals(searchPolicy)) {
+
+	                System.out.println("\nPolicy Found");
+	                p.display();
+	                found = true;
+	            }
+	        }
+
+	        if (!found) {
+	            System.out.println("Policy Not Found");
+	        }
+
+	        // UPDATE POLICY
+	        System.out.print("\nEnter Policy Number to Update: ");
+	        String updatePolicy = sc.nextLine();
+
+	        for (Policy p : policies) {
+
+	            if (p.policyNumber.equals(updatePolicy)) {
+
+	                System.out.print("Enter New Premium Amount: ");
+	                p.premiumAmount = sc.nextDouble();
+	                sc.nextLine();
+
+	                System.out.print("Enter New Policy Type: ");
+	                p.policyType = sc.nextLine();
+
+	                System.out.println("Policy Updated Successfully");
+	            }
+	        }
+	        for (int i = 0; i < policies.size(); i++) {
+
+	            if (!policies.get(i).active) {
+
+	                policies.remove(i);
+	                i--;
+	            }
+	        }
+
+	        // DISPLAY ACTIVE POLICIES
+	        System.out.println("\n--- Active Policies ---");
+
+	        for (Policy p : policies) {
+
+	            p.display();
+	        }
+
+	        sc.close();
+	    }
+	}
