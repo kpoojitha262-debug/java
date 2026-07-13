@@ -1,0 +1,23 @@
+import java.util.LinkedHashSet;
+
+public class HashSetDemo {
+public static void main(String[] args) {
+		//HashSet h = new LinkedHashSet();
+		
+		LinkedHashSet h = new LinkedHashSet();
+		h.add(121);
+		h.add(45.56);
+		h.add('d');
+		h.add(null);
+		h.add(121);
+		h.add("Pooja");
+		System.out.println(h);
+		System.out.println(h.size());
+		System.out.println(h.isEmpty());
+		System.out.println(h.hashCode());
+		System.out.println(h.toString());
+		System.out.println(h.contains(343));
+		System.out.println(h.getClass());
+		System.out.println(h.hashCode());
+	}
+}
