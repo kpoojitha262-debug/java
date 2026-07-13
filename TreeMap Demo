@@ -1,0 +1,27 @@
+import java.util.TreeMap;
+
+public class MapDemo {
+public static void main(String[] args) {
+	
+	     //HashMap hm = new HashMap();
+	     //LinkedHashMap hm = new LinkedHashMap();
+	     TreeMap hm = new TreeMap();
+           hm.put(121 ," Pooja");
+           hm.put(45 , " Vinay");
+           hm.put(43 , " Jitesh");
+           hm.put(12 , " Prasanna");           
+
+           System.out.println(hm);
+           System.out.println(hm.size());
+           System.out.println(hm.keySet());
+           System.out.println(hm.values());
+           System.out.println(hm.containsKey(566));
+           System.out.println(hm.containsValue("sdfds"));
+           System.out.println(hm.hashCode());
+           System.out.println(hm.isEmpty());
+           System.out.println(hm.getClass());
+           System.out.println(hm.get(12));
+           hm.remove(34);
+           System.out.println(hm);
+}
+}
