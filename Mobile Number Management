@@ -1,0 +1,20 @@
+import java.util.TreeMap;
+import java.util.Collections;
+
+public class MapAssignment3 {
+ public static void main(String[] args) {
+	TreeMap<String,Integer> t = new TreeMap<>();
+	t.put("Refrigerator", 50000);
+	t.put("Camera", 90000);
+	t.put("FaceWash", 780);
+	t.put("Watch", 2500);
+	t.put("HeadPhones", 4500);
+	int maxPrice = Collections.max(t.values());
+	for(String p : t.keySet()) {
+		if(t.get(p) ==  maxPrice) {
+		   System.out.println("Costliest Product & Price : "+p+" - "+maxPrice);
+		   System.out.println();
+		}
+	}
+}
+}
