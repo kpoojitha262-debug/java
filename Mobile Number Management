@@ -1,0 +1,15 @@
+import java.util.LinkedHashSet;
+
+public class MobileNumbers {
+	public static void main(String[] args) {
+			//HashSet h = new LinkedHashSet();	
+	     LinkedHashSet h = new LinkedHashSet();
+	 		h.add("6306656564");
+			h.add("6305564231");
+			h.add("9712760347");
+			h.add("9440646456");
+			h.add("9440646455");
+			h.add("6305564231");
+			System.out.println(h);
+		}
+}
