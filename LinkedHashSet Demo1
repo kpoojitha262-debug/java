@@ -1,0 +1,18 @@
+import java.util.LinkedHashSet;
+
+public class ECommerce {
+ public static void main(String[] args) {
+	LinkedHashSet t = new LinkedHashSet();
+	t.add("Electronics");
+	t.add("Grocery");
+	t.add("Fashion");
+	t.add("Beauty");
+	t.add("Home");
+	t.add("Toys");
+	t.add("Furniture");
+	t.add("Fashion");
+	t.add("Grocery");
+	t.add("Beauty");
+	System.out.println(t);
+}
+}
