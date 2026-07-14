@@ -1,0 +1,12 @@
+import java.util.TreeMap;
+public class MapAssignment1 {
+public static void main(String[] args) {
+	TreeMap t = new TreeMap();
+	t.put(98762,5000);
+	t.put(8502, 4000);
+	t.put(7536, 3000);
+	t.put(6541,2000);
+	t.put(9413, 1000);
+	System.out.println("Account number and Balance : " +t);
+}
+}
