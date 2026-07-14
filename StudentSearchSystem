@@ -1,0 +1,21 @@
+import java.util.TreeMap;
+
+public class MapAssignment2 {
+public static void main(String[] args) {
+	TreeMap <Integer,String> t = new TreeMap<>();
+	t.put(101, " Vinay");
+	t.put(102, "Jitesh");
+	t.put(103, "Pooja");
+	t.put(104,"Benoni");
+	t.put(105, "Prasanna");
+	int key = 103;
+	String value = t.get(key);
+	if(value!= null) {
+		System.out.println("Found:" + value);
+	}
+	else {
+		System.out.println("Key Not Found");
+	}
+	System.out.println(t);
+}
+}
