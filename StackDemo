@@ -1,0 +1,16 @@
+import java.util.Stack;
+
+public class StackDemo {
+ public static void main(String[] args) {
+	
+	Stack<String> studentNames = new Stack<String>();
+	studentNames.push("Poojitha");
+	studentNames.push("Vinay");
+	studentNames.push("Jitesh");
+	System.out.println(studentNames);
+	System.out.println(studentNames.peek());
+	System.out.println(studentNames.pop());
+	System.out.println(studentNames);
+	
+}
+}
