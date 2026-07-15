@@ -1,0 +1,22 @@
+import java.util.Queue;
+import java.util.LinkedList;
+
+public class QueueDemo {
+      
+	public static void main(String[] args) {
+		
+	Queue<Integer> studentQueue = new LinkedList<Integer>();
+		
+		studentQueue.add(101);
+		studentQueue.add(102);
+		studentQueue.add(103);
+		
+		System.out.println(studentQueue);
+		studentQueue.poll();
+		
+		System.out.println("After Queue:");
+		System.out.println(studentQueue);
+		
+		System.out.println("Front Element : " + studentQueue.peek());
+	}
+}
