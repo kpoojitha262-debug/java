@@ -1,0 +1,34 @@
+package com.poojitha.day13;
+
+import java.util.LinkedList;
+
+public class LinkedListDemo1 {
+ 
+	public static void main(String[] args) {
+		
+		LinkedList<String> visitedPages = new LinkedList<String>();
+		visitedPages.add("Home Page");
+		visitedPages.add("Products Page");
+		visitedPages.add("Payment Page");
+		visitedPages.add("Profile.Page");
+		
+		System.out.println(visitedPages);
+		System.out.println(visitedPages.size());
+		
+		visitedPages.removeLast();
+		System.out.println(visitedPages);
+	 
+		System.out.println(visitedPages.getClass());
+		System.out.println(visitedPages.getFirst());
+		System.out.println(visitedPages.getLast());
+		
+		System.out.println(visitedPages.hashCode());
+		System.out.println(visitedPages.isEmpty());
+		
+		visitedPages.clear();
+		
+		System.out.println(visitedPages.size());
+		System.out.println(visitedPages.isEmpty());
+		System.out.println(visitedPages);
+	}
+}
