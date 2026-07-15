@@ -1,0 +1,32 @@
+import java.util.LinkedList;
+
+public class LinkedListDemo 
+{		
+	public static void main(String[] args)
+	{
+		LinkedList a1 = new LinkedList();
+		a1.add(121);
+		a1.add(45.56);
+		a1.add('d');
+		a1.add("test");
+		a1.add("Madhu");
+		a1.add(121);
+		System.out.println(a1);
+		a1.addFirst(56);
+		a1.addLast(67);
+		System.out.println(a1);
+		System.out.println(a1.getFirst());
+		System.out.println(a1.getLast());
+		a1.removeFirst();
+		a1.removeLast();
+		System.out.println(a1);
+		System.out.println(a1.size());
+		System.out.println(a1.isEmpty());
+		System.out.println(a1.hashCode());
+		System.out.println(a1.contains(456));
+		a1.clear();
+		System.out.println(a1.size());
+		System.out.println(a1);
+		System.out.println(a1.isEmpty());
+	}
+}
