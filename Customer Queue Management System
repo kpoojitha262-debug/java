@@ -1,0 +1,34 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class CustomerNames {
+
+	public static void main(String[] args) {
+		
+		//Create a Queue 
+	   Queue<String> custoNames = new LinkedList<String>();
+		// Add 5 customers
+	   custoNames.offer("Rahul");
+	   custoNames.offer("Ravi");
+	   custoNames.offer("Ram"); 
+	   custoNames.offer("Ravan");
+	   custoNames.offer("Rishi");
+	   // Print the queue
+	   System.out.println(custoNames);
+	   //show the first customer using peek
+	   System.out.println(custoNames.peek());
+	   //Remove the customer who got service using poll()
+	   custoNames.poll();
+	   System.out.println(custoNames);
+	   //Display Queue
+	   custoNames.offer("Ramu");
+	   System.out.println(custoNames);
+	   // Check queue is empty or not
+	   System.out.println(custoNames.isEmpty());
+	   // Display Total number of customers using size()
+	   System.out.println(custoNames.size());
+	   // Print Final Queue
+	   System.out.println(custoNames);
+	   
+	}
+}
