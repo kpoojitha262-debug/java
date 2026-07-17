@@ -1,0 +1,27 @@
+public class BinaryTree {
+   
+	int data;
+	BinaryTree left, right;
+	BinaryTree(int d)
+	{
+		data = d;
+	}
+}
+
+
+//Node.java
+package com.poojitha.day19Assignment;
+
+public class Node {
+ 
+	public static void main(String[] args) {
+		
+		BinaryTree root = new BinaryTree(10);
+		root.left = new BinaryTree(20);
+		root.right = new BinaryTree(30);
+		System.out.println("             " + root.data);
+		System.out.println("            /  \\");
+		System.out.println("          "+ root.left.data + "   "+ root.right.data);
+		
+	}
+}
