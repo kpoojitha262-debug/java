@@ -1,0 +1,31 @@
+public class BinaryTree2 {
+
+	int data;
+	BinaryTree2 left, right;
+	
+	BinaryTree2(int d){
+		data = d;
+	}
+}
+
+
+//Node2.java
+public class Node2 {
+
+	public static void main(String[] args) {
+		
+		BinaryTree2 root = new BinaryTree2(1);
+		root.left = new BinaryTree2(2);
+		root.right = new BinaryTree2(3);
+		root.left.right = new BinaryTree2(4);
+		
+		System.out.println("           "+ root.data);
+		System.out.println("          / \\");
+		System.out.println("         "+root.left.data + "   "+ root.right.data);
+		System.out.println("        /");
+		System.out.println("     "+root.left.right);
+		
+		
+	}
+}
+
