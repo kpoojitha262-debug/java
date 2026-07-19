@@ -1,0 +1,16 @@
+public class While {
+  
+	public static void main(String[] args) {
+		int i = 1;
+		String b = "World!";
+		
+	   while(i <= 5) 
+	   {
+		   System.out.println("Hii "+ i);
+		   System.out.println("Hello" + b);
+		   System.out.println("Hi " + "How are You");
+		   i++;
+	}
+	   System.out.println("Bye" + i);
+  }
+}
