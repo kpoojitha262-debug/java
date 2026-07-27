@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class SwitchEx {
+public static void main(String[] args) {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	System.out.println("Enter choice:");
+	int choice = sc.nextInt();
+	System.out.println("Enter a value:");
+	int a = sc.nextInt();
+	System.out.println("Enter b value");
+	int b = sc.nextInt();
+
+	switch(choice) {
+	case 1:
+		System.out.println("Addition of two numbers: ");
+		System.out.println(a + b);
+		break;
+	
+	case 2:
+		System.out.println("Subtraction of two numbers: ");
+		System.out.println(a - b);
+		break;
+	case 3 :
+		System.out.println("Multiplication of two numbers: ");
+		System.out.println(a * b);
+	case 4 :
+		if (b != 0) {
+		System.out.println("Division of two numbers: ");
+		System.out.println(a / b);
+		}else {
+			System.out.println("Cannot divide by zero");
+		}
+		break;
+	default:
+		System.out.println("Invalid choice");
+}
+	sc.close();
+}
+}
