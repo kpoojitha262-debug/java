@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class StringBufferDemo {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // Step 1: Create a StringBuffer
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine();
+
+        StringBuffer sb = new StringBuffer(input);
+
+        System.out.println("\nOriginal StringBuffer: " + sb);
+
+        // Step 2: Append text
+        sb.append(" Java");
+        System.out.println("After append: " + sb);
+
+        // Step 3: Insert at specific position
+        sb.insert(0, "Hello ");
+        System.out.println("After insert: " + sb);
+
+        // Step 4: Delete a portion
+        sb.delete(0, 6); // Deletes "Hello "
+        System.out.println("After delete(0,6): " + sb);
+
+        // Step 5: Delete character at specific index
+        if (sb.length() > 2) {
+            sb.deleteCharAt(2);
+            System.out.println("After deleteCharAt(2): " + sb);
+        }
+
+        // Step 6: Replace a portion
+        if (sb.length() > 4) {
+            sb.replace(0, 4, "JAVA");
+            System.out.println("After replace(0,4,\"JAVA\"): " + sb);
+        }
+
+        // Step 7: Reverse
+        sb.reverse();
+        System.out.println("After reverse: " + sb);
+
+        // Step 8: Length and Capacity
+        System.out.println("Length: " + sb.length());
+        System.out.println("Capacity: " + sb.capacity());
+
+        sc.close();
+    }
+}
