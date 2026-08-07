@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+class ShapeAreaCalculator {
+
+    // Area of Square (side × side)
+    double area(double side) {
+        return side * side;
+    }
+
+    // Area of Rectangle (length × breadth)
+    double area(double length, double breadth) {
+        return length * breadth;
+    }
+
+    // Area of Triangle (0.5 × base × height)
+    double area(double base, double height, boolean isTriangle) {
+        return 0.5 * base * height;
+    }
+
+    // Area of Circle (π × r × r)
+    double areaCircle(double radius) {
+        return Math.PI * radius * radius;
+    }
+
+    // Main Method
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        ShapeAreaCalculator calc = new ShapeAreaCalculator();
+
+        // Square
+        System.out.print("Enter side of square: ");
+        double side = sc.nextDouble();
+        System.out.println("Area of Square = " + calc.area(side));
+
+        // Rectangle
+        System.out.print("\nEnter length and breadth of rectangle: ");
+        double length = sc.nextDouble();
+        double breadth = sc.nextDouble();
+        System.out.println("Area of Rectangle = " + calc.area(length, breadth));
+
+        // Triangle
+        System.out.print("\nEnter base and height of triangle: ");
+        double base = sc.nextDouble();
+        double height = sc.nextDouble();
+        System.out.println("Area of Triangle = " + calc.area(base, height, true));
+
+        // Circle
+        System.out.print("\nEnter radius of circle: ");
+        double radius = sc.nextDouble();
+        System.out.println("Area of Circle = " + calc.areaCircle(radius));
+
+        sc.close();
+    }
+}
