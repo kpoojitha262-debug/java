@@ -1,0 +1,87 @@
+import java.util.Scanner;
+
+class Student {
+    String name;
+    String branch;
+    int rollNumber;
+    int marks1, marks2, marks3;
+    int total;
+    float average;
+    char grade;
+    void initializeData() {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Name: ");
+        name = sc.nextLine();
+
+        System.out.print("Enter Roll Number: ");
+        rollNumber = sc.nextInt();
+        sc.nextLine(); // Consume newline
+
+        System.out.print("Enter Branch: ");
+        branch = sc.nextLine();
+
+        System.out.print("Enter Marks of Subject 1: ");
+        marks1 = sc.nextInt();
+
+        System.out.print("Enter Marks of Subject 2: ");
+        marks2 = sc.nextInt();
+
+        System.out.print("Enter Marks of Subject 3: ");
+        marks3 = sc.nextInt();
+    }
+
+    // Method to calculate total, average, and grade
+    void calculateResult() {
+
+        total = marks1 + marks2 + marks3;
+        average = total / 3.0f;
+
+        // Grading Logic
+        if (average >= 75)
+            grade = 'A';
+        else if (average >= 60)
+            grade = 'B';
+        else if (average >= 50)
+            grade = 'C';
+        else if (average >= 35)
+            grade = 'D';
+        else
+            grade = 'F';
+    }
+
+    // Method to display student details
+    void displayDetails() {
+
+        System.out.println("\n----- Student Details -----");
+        System.out.println("Name        : " + name);
+        System.out.println("Roll Number : " + rollNumber);
+        System.out.println("Branch      : " + branch);
+        System.out.println("Marks 1     : " + marks1);
+        System.out.println("Marks 2     : " + marks2);
+        System.out.println("Marks 3     : " + marks3);
+        System.out.println("Total Marks : " + total);
+        System.out.println("Average     : " + average);
+        System.out.println("Grade       : " + grade);
+    }
+
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+        Student s2 = new Student();
+        Student s3 = new Student();
+
+        s1.initializeData();
+        s1.calculateResult();
+        s1.displayDetails();
+
+        s2.initializeData();
+        s2.calculateResult();
+        s2.displayDetails();
+
+        s3.initializeData();
+        s3.calculateResult();
+        s3.displayDetails();
+    }
+}
