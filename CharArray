@@ -1,0 +1,9 @@
+public class StringMethods {
+    public static void main(String[] args) {
+        String str = "Hello";
+        char[] chars = str.toCharArray();
+        for(char c : chars) {
+            System.out.print(c + " ");
+        }
+    }
+}
