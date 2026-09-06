@@ -1,0 +1,9 @@
+public class Main {
+    public static void main(String[] args)
+    {
+        StringBuilder sb = new StringBuilder("Java");
+        System.out.println("Initial StringBuilder: " + sb);
+        sb.append(" Programming");
+        System.out.println("After append: " + sb);
+    }
+}
