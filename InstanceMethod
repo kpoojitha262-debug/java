@@ -1,0 +1,14 @@
+import java.io.*;
+class Test {
+    String n = "";
+    public void test(String n) { 
+      this.n = n; 
+    }
+}
+class Instant {
+    public static void main(String[] args) {
+        Test t = new Test();
+        t.test("JavaProgramming");
+        System.out.println(t.n);
+    }
+}
